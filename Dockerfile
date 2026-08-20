@@ -1,4 +1,4 @@
-FROM tomcat:9.0-jdk11-jre11
+FROM tomcat:10.1-jdk21-jre11
 
 # Xóa app mặc định của Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
