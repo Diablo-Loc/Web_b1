@@ -1,9 +1,9 @@
-FROM tomcat:10.1-jdk21-jre11
+FROM tomcat:10.1
 
-# Xóa app mặc định của Tomcat
+# Xóa các ứng dụng mặc định của Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Thay ten_file_cua_ban.war bằng đúng tên file war xuất ra từ NetBeans
+# Copy file WAR của bạn vào Tomcat
 COPY BT1-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
